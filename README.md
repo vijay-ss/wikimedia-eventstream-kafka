@@ -12,6 +12,7 @@ database.
   - Spring Boot
   - Spring JPA
 - Docker
+- MySQL
 
 ## Methodology
 1. Data Ingestion via Wikimedia url
