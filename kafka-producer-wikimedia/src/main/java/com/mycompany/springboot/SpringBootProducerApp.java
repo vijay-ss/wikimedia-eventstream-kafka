@@ -19,4 +19,4 @@ public class SpringBootProducerApp implements CommandLineRunner {
     public void run(String... args) throws Exception {
         wikimediaProducer.sendMessage();
     }
-}
+}  

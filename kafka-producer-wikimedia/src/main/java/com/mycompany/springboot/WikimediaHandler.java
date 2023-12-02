@@ -31,7 +31,12 @@ public class WikimediaHandler implements EventHandler {
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
         LOGGER.info("Received event: {}", messageEvent.getData());
 
-        kafkaTemplate.send(topic, messageEvent.getData());
+        try {
+            kafkaTemplate.send(topic, messageEvent.getData());
+        }
+        catch(Exception e) {
+            LOGGER.error("Error writing message: {}", e.getMessage());
+        }
     }
 
     @Override
